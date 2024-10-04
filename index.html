@@ -1,8 +1,3 @@
-<!--
-  KeyShotXR
-  (c) Copyright 2012-2017 Luxion ApS - All Rights Reserved.
--->
-
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
@@ -13,17 +8,18 @@
     <style type="text/css">
       body { -ms-touch-action: none; }
     </style>
+    <!-- Correct path to KeyShotXR.js -->
     <script type="text/javascript" src="CurvedBench_001.47/KeyShotXR.js"></script>
     <script type="text/javascript">
       var keyshotXR;
 
       function initKeyShotXR() {
         var nameOfDiv = "KeyShotXR";
-        var folderName = "CurvedBench_001.47";
+        var folderName = "CurvedBench_001.47"; // Folder containing images and script
         var viewPortWidth = 1080;
         var viewPortHeight = 1080;
         var backgroundColor = "#FFFFFF";
-        var uCount = 25;
+        var uCount = 25; // Ensure you have 25 images in the folder
         var vCount = 1;
         var uWrap = true;
         var vWrap = false;
@@ -37,7 +33,7 @@
         var downScaleToBrowser = true;
         var addDownScaleGUIButton = false;
         var downloadOnInteraction = false;
-        var imageExtension = "jpg";
+        var imageExtension = "jpg"; // Image extension (ensure images are .jpg)
         var showLoading = true;
         var loadingIcon = "ks_logo.png"; // Set to empty string for default icon.
         var allowFullscreen = true; // Double-click in desktop browsers for fullscreen.
@@ -46,7 +42,7 @@
         var hotspots = {};
         var isIBooksWidget = false;
         
-        keyshotXR = new keyshotXR(nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots,isIBooksWidget);
+        keyshotXR = new keyshotXR(nameOfDiv, folderName, viewPortWidth, viewPortHeight, backgroundColor, uCount, vCount, uWrap, vWrap, uMouseSensitivity, vMouseSensitivity, uStartIndex, vStartIndex, minZoom, maxZoom, rotationDamping, downScaleToBrowser, addDownScaleGUIButton, downloadOnInteraction, imageExtension, showLoading, loadingIcon, allowFullscreen, uReverse, vReverse, hotspots, isIBooksWidget);
       }
 
       window.onload = initKeyShotXR;
